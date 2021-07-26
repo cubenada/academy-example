@@ -113,6 +113,19 @@ sources:
             tests:
               - unique
               - not_null
+      - name: businessentitycontact
+        description: TODO 
+        columns: 
+          - name: businessentityid
+            description: TODO 
+            tests:
+              - unique
+              - not_null
+          - name: personid
+            description: TODO 
+            tests:
+              - unique
+              - not_null
       - name: address
         description: TODO 
         columns: 
