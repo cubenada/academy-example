@@ -1,0 +1,145 @@
+version: 2
+
+sources:
+  - name: production_adventure_works
+    description: 
+    tables:
+      - name: product
+        description: 
+        columns: 
+          - name: productid
+            description: 
+            tests:
+              - unique
+              - not_null
+  - name: sales_adventure_works
+    description: 
+    tables:
+      - name: salesperson
+        description: 
+        columns: 
+          - name: businessentityid
+            description: 
+            tests:
+              - unique
+              - not_null
+      - name: customer
+        description: 
+        columns: 
+          - name: customerid
+            description: 
+            tests:
+              - unique
+              - not_null
+      - name: creditcard
+        description: 
+        columns: 
+          - name: creditcardid
+            description: 
+            tests:
+              - unique
+              - not_null
+      - name: salesorderheader 
+        description: 
+        columns: 
+          - name: salesorderid
+            description: 
+            tests:
+              - unique
+              - not_null
+          - name: businessentityid
+            description: 
+            tests:
+              - unique
+              - not_null
+      - name: salesorderdetail 
+        description: 
+        columns: 
+          - name: salesorderdetailid
+            description: 
+            tests:
+              - unique
+              - not_null
+      - name: salesreason 
+        description: 
+        columns: 
+          - name: salesreasonid
+            description: 
+            tests:
+              - unique
+              - not_null
+      - name: salesorderheadersalesreason 
+        description: 
+        columns: 
+          - name: salesorderid
+            description: 
+            tests:
+              - unique
+              - not_null
+          - name: salesreasonid
+            description: 
+            tests:
+              - unique
+              - not_null
+          - name: businessentityid
+            description: 
+            tests:
+              - unique
+              - not_null
+  - name: person_adventure_works
+    description: 
+    tables:
+      - name: person
+        description: 
+        columns: 
+          - name: businessentityid
+            description: 
+            tests:
+              - unique
+              - not_null
+      - name: address
+        description: 
+        columns: 
+          - name: addressid
+            description: 
+            tests:
+              - unique
+              - not_null 
+      - name: stateprovince
+        description: 
+        columns: 
+          - name: stateprovinceid
+            description: 
+            tests:
+              - unique
+              - not_null       
+  - name: humanresources_adventure_works
+    description: 
+    tables:
+      - name: employee
+        description: 
+        columns: 
+          - name: businessentityid
+            description: 
+            tests:
+              - unique
+              - not_null
+  - name: purchasing_adventure_works
+    description: 
+    tables:
+      - name: purchaseorderdetail
+        description: 
+        columns: 
+          - name: purchaseorderdetailid
+            description: 
+            tests:
+              - unique
+              - not_null
+      - name: purchaseorderheader
+        description: 
+        columns: 
+          - name: purchaseorderid
+            description: 
+            tests:
+              - unique
+              - not_null
