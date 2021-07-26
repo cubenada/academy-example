@@ -2,144 +2,160 @@ version: 2
 
 sources:
   - name: production_adventure_works
-    description: 
+    description: TODO
     tables:
       - name: product
-        description: 
+        description: TODO
         columns: 
           - name: productid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
+      - name: productsubcategory
+        description: TODO
+        columns: 
+          - name: productsubcategoryid
+            description: TODO 
+            tests:
+              - unique
+              - not_null
+      - name: productcategory
+        description: TODO
+        columns: 
+          - name: productcategoryid
+            description: TODO 
+            tests:
+              - unique
+              - not_null           
   - name: sales_adventure_works
-    description: 
+    description: TODO 
     tables:
       - name: salesperson
-        description: 
+        description: TODO 
         columns: 
           - name: businessentityid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
       - name: customer
-        description: 
+        description: TODO 
         columns: 
           - name: customerid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
       - name: creditcard
-        description: 
+        description: TODO 
         columns: 
           - name: creditcardid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
       - name: salesorderheader 
-        description: 
+        description: TODO 
         columns: 
           - name: salesorderid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
           - name: businessentityid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
       - name: salesorderdetail 
-        description: 
+        description: TODO 
         columns: 
           - name: salesorderdetailid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
       - name: salesreason 
-        description: 
+        description: TODO 
         columns: 
           - name: salesreasonid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
       - name: salesorderheadersalesreason 
-        description: 
+        description: TODO 
         columns: 
           - name: salesorderid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
           - name: salesreasonid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
           - name: businessentityid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
   - name: person_adventure_works
-    description: 
+    description: TODO 
     tables:
       - name: person
-        description: 
+        description: TODO 
         columns: 
           - name: businessentityid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
       - name: address
-        description: 
+        description: TODO 
         columns: 
           - name: addressid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null 
       - name: stateprovince
-        description: 
+        description: TODO 
         columns: 
           - name: stateprovinceid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null       
   - name: humanresources_adventure_works
-    description: 
+    description: TODO 
     tables:
       - name: employee
-        description: 
+        description: TODO 
         columns: 
           - name: businessentityid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
   - name: purchasing_adventure_works
-    description: 
+    description: TODO 
     tables:
       - name: purchaseorderdetail
-        description: 
+        description: TODO 
         columns: 
           - name: purchaseorderdetailid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
       - name: purchaseorderheader
-        description: 
+        description: TODO 
         columns: 
           - name: purchaseorderid
-            description: 
+            description: TODO 
             tests:
               - unique
               - not_null
