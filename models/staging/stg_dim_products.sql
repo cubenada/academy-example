@@ -18,25 +18,27 @@ with
             , standardcost as standard_cost
 
             /* Columns to skip in marts */
+            , productmodelid
+            , sellstartdate	
             , sellenddate
             , safetystocklevel
             , finishedgoodsflag
             , class
             , makeflag
             , productnumber
+            , daystomanufacture
             , reorderpoint
+            , weightunitmeasurecode
+            , sizeunitmeasurecode
             , modifieddate
             , rowguid
-            , productmodelid
-            , weightunitmeasurecode
             , _sdc_table_version
-            , sizeunitmeasurecode
             , _sdc_received_at
             , _sdc_sequence
-            , daystomanufacture
             , _sdc_batched_at
-            , sellstartdate	
+
         from {{ source('production_adventure_works', 'product') }}
+        where finishedgoodsflag = True
     )
     , productsubcategory as (
         select
