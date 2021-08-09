@@ -2,18 +2,18 @@ with
     purchase_order_detail as (
         select
             /* Primary key */
-            purchaseorderdetailid as purchase_order_detail_id
+            cast(purchaseorderdetailid as integer) as purchase_order_detail_id
 
             /* Foreign keys */
-            , purchaseorderid as purchase_order_id
-            , productid	as product_id
+            , cast(purchaseorderid as integer) as purchase_order_id
+            , cast(productid as integer) as product_id
 
             /* Columns to use in final join */
-            , duedate as due_date
-            , orderqty as order_qty
-            , unitprice as unit_price
-            , receivedqty as received_qty
-            , rejectedqty as rejected_qty
+            , cast(duedate as date) as due_date
+            , cast(orderqty as integer) as order_qty
+            , cast(unitprice as numeric) as unit_price
+            , cast(receivedqty as integer) as received_qty
+            , cast(rejectedqty as integer) as rejected_qty
 
             /* Columns to skip in final join */
             , modifieddate
@@ -26,20 +26,19 @@ with
     , purchase_order_header as (
         select
             /* Primary key */
-            purchaseorderid as purchase_order_id
+            cast(purchaseorderid as integer) as purchase_order_id
 
             /* Foreign keys */
-            , vendorid as vendor_id
-            , shipmethodid as ship_method_id
-            , employeeid as employee_id
+            , cast(vendorid as integer) as vendor_id
+            , cast(shipmethodid as integer) as ship_method_id
+            , cast(employeeid as integer) as employee_id
 
             /* Columns to use in final join */
-            , `status`
-            , orderdate as order_date
-            , shipdate as ship_date
-            , subtotal
-            , freight
-            , taxamt
+            , cast(`status` as integer) as `status`
+            , cast(orderdate as date) as order_date
+            , cast(shipdate as date) as ship_date
+            , cast(freight as numeric) as freight
+            , cast(taxamt as numeric) as taxamt
 
             /* Columns to skip in final join */
             , revisionnumber
