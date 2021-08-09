@@ -2,11 +2,11 @@ with
     customers as (
         select 
             /* Primary key */
-            customerid as customer_id
+            cast(customerid as integer) as customer_id
 
             /* Foreign keys */
-            , personid as person_id
-            , territoryid as territory_id
+            , cast(personid as integer) as person_id
+            , cast(territoryid as integer) as territory_id
 
             /* Columns to skip in marts */
             , storeid
