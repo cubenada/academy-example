@@ -27,7 +27,7 @@ with
             , sales_order_details.unit_price_discount
             , sales_order_header.subtotal
             , sales_order_header.taxamt
-            , sales_order_header.freight	
+            , sales_order_header.freight
             , sales_order_header.total
         from {{ ref('stg_sales_order_details') }} as sales_order_details
         left join {{ ref('stg_sales_order_header') }} as sales_order_header
