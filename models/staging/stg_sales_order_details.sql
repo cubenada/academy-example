@@ -11,7 +11,7 @@ with
             /* Columns to use in final join */
             , cast(orderqty as integer) as order_qty
             , cast(unitprice as numeric) as unit_price
-            , cast((unitprice * unitpricediscount) as numeric) as unit_price_discount
+            , cast(unitpricediscount as numeric) as unit_price_discount
 	
             /* Columns to skip in final join */
             , carriertrackingnumber
