@@ -33,7 +33,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   dw_adventure_works:
-      # Applies to all files under models/example/
+      # Applies to all files under models/
       marts:
           materialized: table
       staging:
