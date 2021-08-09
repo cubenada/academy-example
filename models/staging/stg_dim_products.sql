@@ -17,7 +17,7 @@ with
             , listprice as list_price
             , standardcost as standard_cost
 
-            /* Columns to skip in marts */
+            /* Columns to skip in final table */
             , productmodelid
             , sellstartdate	
             , sellenddate
@@ -51,7 +51,7 @@ with
             /* Columns to use in marts */
             , name as subcategory
 
-            /* Columns to skip in marts */
+            /* Columns to skip in final table */
             , modifieddate
             , rowguid	
             , _sdc_sequence	
@@ -68,7 +68,7 @@ with
             /* Columns to use in marts */
             , name as category
 
-            /* Columns to skip in marts */
+            /* Columns to skip in final table */
             , modifieddate	
             , rowguid	
             , _sdc_sequence	

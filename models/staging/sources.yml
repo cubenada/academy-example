@@ -102,6 +102,14 @@ sources:
             tests:
               - unique
               - not_null
+      - name: salesterritory 
+        description: TODO 
+        columns: 
+          - name: territoryid
+            description: TODO 
+            tests:
+              - unique
+              - not_null
   - name: person_adventure_works
     description: TODO 
     tables:
@@ -128,7 +136,15 @@ sources:
             description: TODO 
             tests:
               - unique
-              - not_null       
+              - not_null
+      - name: countryregion
+        description: TODO 
+        columns: 
+          - name: countryregioncode
+            description: TODO 
+            tests:
+              - unique
+              - not_null   
   - name: humanresources_adventure_works
     description: TODO 
     tables:

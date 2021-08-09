@@ -2,12 +2,12 @@ with
     sales_people as (
         select
             /* Primary key */
-            businessentityid as business_entity_id
+            businessentityid as sales_person_id
 
             /* Foreign key */
             , territoryid as territory_id
 
-            /* Columns to skip in marts */
+            /* Columns to skip in final table */
             , salesquota
             , modifieddate
             , rowguid
@@ -24,12 +24,12 @@ with
     , employees as (
         select
             /* Primary key */
-            businessentityid as business_entity_id
+            businessentityid as employee_id
 
             /* Columns to use in marts */
             , gender
 
-            /* Columns to skip in marts */
+            /* Columns to skip in final table */
             , jobtitle
             , nationalidnumber
             , loginid
@@ -58,7 +58,7 @@ with
             , firstname as first_name
             , lastname as last_name
 
-            /* Columns to skip in marts */
+            /* Columns to skip in final table */
             , title
             , middlename
             , persontype
@@ -76,7 +76,7 @@ with
     , joined as (
         select
             /* Primary key */
-            sales_people.business_entity_id
+            sales_people.sales_person_id
 
             /* Foreign key */
             , sales_people.territory_id
@@ -85,12 +85,11 @@ with
             , people.first_name
             , people.last_name
             , employees.gender
-
         from sales_people
         left join employees
-        on sales_people.business_entity_id = employees.business_entity_id
+        on sales_people.sales_person_id = employees.employee_id
         left join people
-        on sales_people.business_entity_id = people.business_entity_id
+        on sales_people.sales_person_id = people.business_entity_id
     )
 
 select * from joined

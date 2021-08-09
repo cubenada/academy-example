@@ -98,6 +98,7 @@ with
             , addresses.postal_code
             , country_regions.country_region_name
             , state_provinces.state_province_name
+            , sales_territories.sales_territory_name
             , sales_territories.continent
         from addresses
         left join state_provinces
