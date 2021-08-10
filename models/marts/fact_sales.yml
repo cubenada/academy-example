@@ -1,0 +1,80 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: Sales fact table in adventure works data warehouse.
+    columns: 
+      - name: order_sk
+        description: Surrogate key of sales fact table.
+        tests:
+          - unique
+          - not_null
+      - name: order_detail_id
+        description: Primary key of sales fact table.
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: Foreign key of sales fact table, related to sales order header staging table.
+        tests:
+          - not_null
+      - name: sales_person_id
+        description: Foreign key of sales fact table, related to sales people dimension table.
+      - name: customer_id
+        description: Foreign key of sales fact table, related to customer dimension table.
+        tests:
+          - not_null
+      - name: ship_to_address_id
+        description: Foreign key of sales fact table, related to customer dimension table.
+        tests:
+          - not_null
+      - name: product_id
+        description: Foreign key of sales fact table, related to products dimension table.
+        tests:
+          - not_null
+      - name: status
+        description: Status of order of sales fact table.
+        tests:
+          - not_null
+      - name: order_date
+        description: Order date of sales fact table.
+        tests:
+          - not_null
+      - name: ship_date
+        description: Ship date of sales fact table.
+        tests:
+          - not_null
+      - name: due_date
+        description: Due data of sales fact table.
+        tests:
+          - not_null
+      - name: card_type
+        description: Card type of sales fact table.
+      - name: order_qty
+        description: Quantity of products in order of sales fact table.
+        tests:
+          - not_null
+      - name: unit_price
+        description: Unit price of products in order of sales fact table.
+        tests:
+          - not_null
+      - name: unit_price_discount
+        description: Unit price discount in percentage of products in order of sales fact table.
+        tests:
+          - not_null
+      - name: subtotal
+        description: Subtotal of order of sales fact table.
+        tests:
+          - not_null
+      - name: taxamt
+        description: Tax AMT of order of sales fact table.
+        tests:
+          - not_null
+      - name: freight
+        description: Freight of order of sales fact table.
+        tests:
+          - not_null
+      - name: total
+        description: Total of order of sales fact table, subtotal + taxamt + freight.
+        tests:
+          - not_null

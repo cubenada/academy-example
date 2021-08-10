@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_territories
+    description: Territories dimension table in adventure works data warehouse.
+    columns: 
+      - name: address_sk
+        description: Surrogate key of territories dimension table.
+        tests:
+          - unique
+          - not_null
+      - name: address_id
+        description: Primary key of territories dimension table.
+        tests:
+          - unique
+          - not_null
+      - name: city
+        description: City of territories dimension table.
+        tests:
+          - not_null
+      - name: postal_code
+        description: Postal code of territories dimension table.
+        tests:
+          - not_null
+      - name: country_region_name
+        description: Country region of territories dimension table.
+        tests:
+          - not_null
+      - name: state_province_name
+        description: State/province name of territories dimension table.
+        tests:
+          - not_null
+      - name: continent
+        description: Continent of territories dimension table.
+        tests:
+          - not_null

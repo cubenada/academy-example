@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: Products dimension table in adventure works data warehouse.
+    columns: 
+      - name: product_sk
+        description: Surrogate key of products dimension table.
+        tests:
+          - unique
+          - not_null
+      - name: product_id
+        description: Primary key of products dimension table.
+        tests:
+          - unique
+          - not_null	
+      - name: product_name
+        description: Product name of products dimension table.
+        tests:
+          - unique
+          - not_null
+      - name: category
+        description: Category name of products dimension table.
+        tests:
+          - not_null	
+      - name: subcategory
+        description: Subcategory name of products dimension table.
+        tests:
+          - not_null	
+      - name: color
+        description: Color of products dimension table.
+      - name: product_line
+        description: Line of products dimension table.
+      - name: style
+        description: Style of products dimension table.
+      - name: size
+        description: Size of products dimension table.
+      - name: weight
+        description: Weight of products dimension table.
+      - name: list_price
+        description: List price of products dimension table.
+        tests:
+          - not_null	
+      - name: standard_cost
+        description: Standard cost of products dimension table.
+        tests:
+          - not_null	

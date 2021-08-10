@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: This is the customers dimension table in adventure works data warehouse.
+    columns: 
+      - name: customer_sk
+        description: Surrogate key of customers dimension table.
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Primary key from customers dimension table.
+        tests:
+          - unique
+          - not_null
+      - name: person_id
+        description: Foreign key from customers dimension table, used to link with person table from source data.
+        tests:
+          - unique
+          - not_null
+      - name: territory_id
+        description: Foregin key from customers dimension table, used in sales territories table from source data.
+        tests:
+          - not_null
+      - name: first_name
+        description: First name of customers from customer dimension table.
+        tests:
+          - not_null
+      - name: last_name
+        description: First name from customers from customer dimension table.
+        tests:
+          - not_null

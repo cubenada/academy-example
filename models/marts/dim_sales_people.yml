@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_sales_people
+    description: Sales people dimension table in adventure works data warehouse.
+    columns: 
+      - name: sales_person_sk
+        description: Surrogate key of sales people dimension table.
+        tests:
+          - unique
+          - not_null
+      - name: sales_person_id
+        description: Primary key of sales people dimension table.
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: First names of sales people dimension table.
+        tests:
+          - not_null
+      - name: last_name
+        description: Last names of sales people dimension table.
+        tests:
+          - not_null
+      - name: gender
+        description: Genders of sales people dimension table.
+        tests:
+          - not_null

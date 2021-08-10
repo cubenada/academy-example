@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_sales_reason
+    description: Sales reasons dimension table in adventure works data warehouse.
+    columns: 
+      - name: order_sk
+        description: Surrogate key of sales reason dimension table.
+        tests:
+          - not_null
+      - name: order_id
+        description: Primary key of sales reason dimension table.
+        tests:
+          - not_null
+      - name: reason_type
+        description: Type of sales reason dimension table.
+        tests:
+          - not_null
+      - name: reason_description
+        description: Description of sales reason dimension table
+        tests:
+          - not_null
