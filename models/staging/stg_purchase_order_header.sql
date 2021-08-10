@@ -15,6 +15,7 @@ with
             , cast(shipdate as date) as ship_date
             , cast(freight as numeric) as freight
             , cast(taxamt as numeric) as taxamt
+            , cast(subtotal as numeric) as subtotal
 
             /* Columns to skip in final join */
             , revisionnumber

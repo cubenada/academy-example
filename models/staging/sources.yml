@@ -63,11 +63,6 @@ sources:
             tests:
               - unique
               - not_null
-          - name: businessentityid
-            description: TODO 
-            tests:
-              - unique
-              - not_null
       - name: salesorderdetail 
         description: TODO 
         columns: 
@@ -90,17 +85,10 @@ sources:
           - name: salesorderid
             description: TODO 
             tests:
-              - unique
               - not_null
           - name: salesreasonid
             description: TODO 
             tests:
-              - unique
-              - not_null
-          - name: businessentityid
-            description: TODO 
-            tests:
-              - unique
               - not_null
       - name: salesterritory 
         description: TODO 
