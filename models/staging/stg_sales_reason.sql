@@ -6,9 +6,9 @@ with
 
             /* Columns to use in final join */
             , cast(reasontype as string) as reason_type
+            , cast(`name` as string) as reason_description
             
             /* Columns to skip in final join */
-            , `name`
             , modifieddate
             , _sdc_sequence
             , _sdc_table_version
