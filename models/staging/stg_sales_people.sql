@@ -4,9 +4,6 @@ with
             /* Primary key */
             cast(businessentityid as integer) as sales_person_id
 
-            /* Foreign key */
-            , cast(territoryid as integer) as territory_id
-
             /* Columns to skip in final join */
             , salesquota
             , modifieddate
