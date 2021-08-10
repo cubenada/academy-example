@@ -7,9 +7,6 @@ with
             /* Primary key */
             , sales_people.sales_person_id
 
-            /* Foreign key */
-            , sales_people.territory_id
-
             /* Columns to use in marts */
             , people.first_name
             , people.last_name
