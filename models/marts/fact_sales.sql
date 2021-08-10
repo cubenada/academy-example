@@ -12,7 +12,6 @@ with
             , sales_order_header.sales_person_id
             , sales_order_header.customer_id
             , sales_order_header.ship_to_address_id
-            , sales_order_header.territory_id
             , sales_order_details.product_id
             
             /* Columns to use in marts table */

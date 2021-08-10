@@ -8,7 +8,6 @@ with
             , cast(salespersonid as integer) as sales_person_id
             , cast(customerid as integer) as customer_id
             , cast(shiptoaddressid as integer) as ship_to_address_id
-            , cast(territoryid as integer) as territory_id
             , cast(creditcardid as integer) as credit_card_id
 
             /* Columns to use in final join */
