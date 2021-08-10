@@ -9,11 +9,6 @@ models:
         tests:
           - unique
           - not_null
-      - name: order_detail_id
-        description: Primary key of sales fact table.
-        tests:
-          - unique
-          - not_null
       - name: order_id
         description: Foreign key of sales fact table, related to sales order header staging table.
         tests:
@@ -26,10 +21,6 @@ models:
           - not_null
       - name: ship_to_address_id
         description: Foreign key of sales fact table, related to customer dimension table.
-        tests:
-          - not_null
-      - name: product_id
-        description: Foreign key of sales fact table, related to products dimension table.
         tests:
           - not_null
       - name: status
@@ -50,18 +41,6 @@ models:
           - not_null
       - name: card_type
         description: Card type of sales fact table.
-      - name: order_qty
-        description: Quantity of products in order of sales fact table.
-        tests:
-          - not_null
-      - name: unit_price
-        description: Unit price of products in order of sales fact table.
-        tests:
-          - not_null
-      - name: unit_price_discount
-        description: Unit price discount in percentage of products in order of sales fact table.
-        tests:
-          - not_null
       - name: subtotal
         description: Subtotal of order of sales fact table.
         tests:
